@@ -34,11 +34,9 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
-    "VERSION",
     "deep_dive.gemspec",
     "lib/deep_dive.rb",
     "lib/deep_dive/deep_dive.rb",
-    "lib/deep_dive/version.rb",
     "spec/lib/deep_dive/deep_dive_spec.rb",
     "spec/spec_helper.rb"
   ]
