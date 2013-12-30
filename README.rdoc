@@ -13,44 +13,44 @@ for deep cloning or deep duping.
 
 == Examples
 
-class FooBase
-  include DeepDive
-  exclude :c
-end
+ class FooBase
+   include DeepDive
+   exclude :c
+ end
 
 Even though the instance variable @c is not defined in the base class, any instance
 variables with that name in the subclasses will be excluded from the deep clone or duping.
 It will simply use the reference to that object instead (a.k.a shallow copying)
 
-class Foo < FooBase
-  attr_accessor :a, :b, :c, :changeme
-end
+ class Foo < FooBase
+   attr_accessor :a, :b, :c, :changeme
+ end
 
-class Bar < FooBase
-  attr_accessor :a, :b, :c, :changeme
-end
+ class Bar < FooBase
+   attr_accessor :a, :b, :c, :changeme
+ end
 
-class FooBar < FooBase
-  attr_accessor :a, :b, :c, :changeme, :dontcopy, :arr, :hsh, :nonddob
-  exclude :dontcopy
-end
+ class FooBar < FooBase
+   attr_accessor :a, :b, :c, :changeme, :dontcopy, :arr, :hsh, :nonddob
+   exclude :dontcopy
+ end
 
-@foo = Foo.new
-@bar = Bar.new
-@foobar = FooBar.new
-@foobar.arr = [@foo, @bar, @foobar, "Just a string"]
-@foobar.hsh = {foo: @foo, bar: @bar, foobar: @foobar, nonddob: "just a string"}
+ @foo = Foo.new
+ @bar = Bar.new
+ @foobar = FooBar.new
+ @foobar.arr = [@foo, @bar, @foobar, "Just a string"]
+ @foobar.hsh = {foo: @foo, bar: @bar, foobar: @foobar, nonddob: "just a string"}
 
-@foo.a = 'foo just around'
-@bar.a = 'bar hanging around'
-@foo.b = @bar
-@bar.b = @foo
-@foo.c = @bar.c = @foobar.c = @foobar
-@foo.changeme = @bar.changeme = @foobar.changeme = "initial"
+ @foo.a = 'foo just around'
+ @bar.a = 'bar hanging around'
+ @foo.b = @bar
+ @bar.b = @foo
+ @foo.c = @bar.c = @foobar.c = @foobar
+ @foo.changeme = @bar.changeme = @foobar.changeme = "initial"
 
 So now if you do:
 
-nfoo = @foo.dclone
+ nfoo = @foo.dclone
 
 @foo.c will refer to the same object as nfoo.c,
 but @foo.b and nfoo.b will be different, as nfoo.b will be a clone of @foo.b.
