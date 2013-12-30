@@ -37,16 +37,16 @@
           <file leaf-file-name="deep_dive.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/deep_dive/deep_dive.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="27" column="27" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
+                <state line="1" column="25" selection-start="13" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="deep_dive.gemspec" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="deep_dive.gemspec" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/deep_dive.gemspec">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="18" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.5324074" vertical-offset="0" max-vertical-offset="648">
+                <state line="78" column="0" selection-start="2812" selection-end="2812" vertical-scroll-proportion="1.6666666" vertical-offset="90" max-vertical-offset="1260">
                   <folding />
                 </state>
               </provider>
@@ -65,10 +65,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="version.rb" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="version.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/deep_dive/version.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.06807867" vertical-offset="0" max-vertical-offset="661">
+                <state line="3" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Rakefile" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Rakefile">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="35" column="30" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.3935185" vertical-offset="270" max-vertical-offset="930">
                   <folding />
                 </state>
               </provider>
@@ -99,6 +108,7 @@
         <option value="$PROJECT_DIR$/lib/deep_dive/deep_dive.rb" />
         <option value="$PROJECT_DIR$/README.rdoc" />
         <option value="$PROJECT_DIR$/lib/deep_dive/version.rb" />
+        <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/deep_dive.gemspec" />
       </list>
     </option>
@@ -458,13 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/deep_dive/deep_dive.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="0" selection-start="1336" selection-end="1336" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
@@ -495,14 +498,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/deep_dive/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.06807867" vertical-offset="0" max-vertical-offset="661">
+        <state line="3" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/deep_dive/deep_dive.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="25" selection-start="13" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deep_dive.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="18" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.5324074" vertical-offset="0" max-vertical-offset="648">
+        <state line="78" column="0" selection-start="2812" selection-end="2812" vertical-scroll-proportion="1.6666666" vertical-offset="90" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="30" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.3935185" vertical-offset="270" max-vertical-offset="930">
           <folding />
         </state>
       </provider>

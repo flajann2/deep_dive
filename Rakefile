@@ -17,9 +17,16 @@ Jeweler::Tasks.new do |gem|
   gem.name = "deep_dive"
   gem.homepage = "http://github.com/linuxbloke/deep_dive"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "fred_github@linuxbloke.com"
+  gem.summary = %Q{DeepDive Deep Contolled Cloning}
+  gem.description = %Q{
+  When you have a system of objects that have many references to each other, it becomes an
+  issue to be able to clone properly that object graph. There may be control objects you may
+  not want to clone, but maintain references to. And some references you may not wish to clone at all.
+
+  Enter DeepDive. Allows you a means by which you can do controlled deep cloning or
+  copying of your complex interconnected objects.
+  }
+  gem.email = "fred@lrcsoft.com"
   gem.authors = ["Fred Mitchell"]
   # dependencies defined in Gemfile
 end
