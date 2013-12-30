@@ -4,6 +4,10 @@ require 'rubygems'
 require 'bundler'
 require 'semver'
 
+def s_version
+  SemVer.find.format "%M.%m.%p%s"
+end
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -20,7 +24,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "https://github.com/flajann2/deep_dive"
   gem.license = "MIT"
   gem.summary = %Q{DeepDive Deep Contolled Cloning}
-  gem.version = SemVer.find.format "%M.%m.%p%s"
+  gem.version = s_version
   gem.description = %Q{
   When you have a system of objects that have many references to each other, it becomes an
   issue to be able to clone properly that object graph. There may be control objects you may
@@ -50,7 +54,7 @@ task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = s_version
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "deep_dive #{version}"
