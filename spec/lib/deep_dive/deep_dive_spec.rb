@@ -14,7 +14,7 @@ class Bar < FooBase
 end
 
 class FooBar < FooBase
-  attr_accessor :a, :b, :c, :changeme, :dontcopy, :arr, :hsh
+  attr_accessor :a, :b, :c, :changeme, :dontcopy, :arr, :hsh, :nonddob
   exclude :dontcopy
 end
 
@@ -23,8 +23,8 @@ describe DeepDive do
     @foo = Foo.new
     @bar = Bar.new
     @foobar = FooBar.new
-    @foobar.arr = [@foo, @bar, @foobar]
-    @foobar.hsh = {foo: @foo, bar: @bar, foobar: @foobar}
+    @foobar.arr = [@foo, @bar, @foobar, "Just a string"]
+    @foobar.hsh = {foo: @foo, bar: @bar, foobar: @foobar, nonddob: "just a string"}
 
     @foo.a = 'foo just around'
     @bar.a = 'bar hanging around'
@@ -71,7 +71,9 @@ describe DeepDive do
       cfb.arr.size.should > 0
       (0 ... cfb.arr.size).each do |i|
         cfb.arr[i].should_not be_nil
-        cfb.arr[i].should_not == @foobar.arr[i]
+        if @foobar.arr[i].respond_to? :_replicate
+          cfb.arr[i].should_not == @foobar.arr[i]
+        end
       end
     end
 

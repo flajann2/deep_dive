@@ -52,6 +52,15 @@ module DeepDive
   # For all enumerable objects, we will have to handle their situation
   # differently.
   module ::Enumerable
+    # FIXME: clean up the code a bit, this could be better structured.
+    def _ob_maybe_repl(v: nil, dupit: nil, oc: nil)
+      if v.respond_to? :_replicate
+        v._replicate(oc: oc, dupit: dupit)
+      else
+        v
+      end
+    end
+
     # add a single element to the enumerable.
     # You may pass a single parameter, or a key, value. In any case,
     # all will added.
@@ -64,12 +73,12 @@ module DeepDive
         case
           when self.kind_of?(Set)
           when self.kind_of?(Array)
-            self << v._replicate(oc: oc, dupit: dupit)
+            self << _ob_maybe_repl(v: v, dupit: dupit, oc: oc)
           else
             raise DeepDiveException.new("Don't know how to add new elements for class #{self.class}")
         end
       else
-        self[v.first] = v.last._replicate(oc: oc, dupit: dupit)
+        self[v.first] = _ob_maybe_repl(v: v, dupit: dupit, oc: oc)
       end
     end
 
