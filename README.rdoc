@@ -11,15 +11,52 @@ copying of your complex interconnected objects.
 Simply include DeepDive in your base class. All classes derived will be set
 for deep cloning or deep duping.
 
-== Contributing to deep_dive
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+== Examples
+
+class FooBase
+  include DeepDive
+  exclude :c
+end
+
+Even though the instance variable @c is not defined in the base class, any instance
+variables with that name in the subclasses will be excluded from the deep clone or duping.
+It will simply use the reference to that object instead (a.k.a shallow copying)
+
+class Foo < FooBase
+  attr_accessor :a, :b, :c, :changeme
+end
+
+class Bar < FooBase
+  attr_accessor :a, :b, :c, :changeme
+end
+
+class FooBar < FooBase
+  attr_accessor :a, :b, :c, :changeme, :dontcopy, :arr, :hsh, :nonddob
+  exclude :dontcopy
+end
+
+@foo = Foo.new
+@bar = Bar.new
+@foobar = FooBar.new
+@foobar.arr = [@foo, @bar, @foobar, "Just a string"]
+@foobar.hsh = {foo: @foo, bar: @bar, foobar: @foobar, nonddob: "just a string"}
+
+@foo.a = 'foo just around'
+@bar.a = 'bar hanging around'
+@foo.b = @bar
+@bar.b = @foo
+@foo.c = @bar.c = @foobar.c = @foobar
+@foo.changeme = @bar.changeme = @foobar.changeme = "initial"
+
+So now if you do:
+
+nfoo = @foo.dclone
+
+@foo.c will refer to the same object as nfoo.c,
+but @foo.b and nfoo.b will be different, as nfoo.b will be a clone of @foo.b.
+
+Please see spec/lib/deep_dive/deep_dive_spec.rb for a more comprehensve example
+of the above. Better documentation will be supplied shortly.
 
 == Copyright
 
