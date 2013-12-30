@@ -43,10 +43,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="deep_dive.gemspec" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="deep_dive.gemspec" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/deep_dive.gemspec">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="78" column="0" selection-start="2812" selection-end="2812" vertical-scroll-proportion="1.6666666" vertical-offset="90" max-vertical-offset="1260">
+                <state line="14" column="24" selection-start="896" selection-end="896" vertical-scroll-proportion="0.32407406" vertical-offset="0" max-vertical-offset="1260">
                   <folding />
                 </state>
               </provider>
@@ -74,10 +74,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Rakefile" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Rakefile">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="35" column="30" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.3935185" vertical-offset="270" max-vertical-offset="930">
+                <state line="22" column="47" selection-start="628" selection-end="628" vertical-scroll-proportion="0.375" vertical-offset="87" max-vertical-offset="975">
                   <folding />
                 </state>
               </provider>
@@ -510,16 +510,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deep_dive.gemspec">
+    <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2812" selection-end="2812" vertical-scroll-proportion="1.6666666" vertical-offset="90" max-vertical-offset="1260">
+        <state line="22" column="47" selection-start="628" selection-end="628" vertical-scroll-proportion="0.375" vertical-offset="87" max-vertical-offset="975">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
+    <entry file="file://$PROJECT_DIR$/deep_dive.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="30" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.3935185" vertical-offset="270" max-vertical-offset="930">
+        <state line="14" column="24" selection-start="896" selection-end="896" vertical-scroll-proportion="0.32407406" vertical-offset="0" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
