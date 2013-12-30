@@ -89,7 +89,7 @@ module DeepDive
     # to abstract that issue to #_add.
     #
     # FIXME: We will initially not handle Enumberables that have instance variables.
-    # This issue will be addressed at a later date.
+    # FIXME: This issue will be addressed at a later date.
     def _replicate(dupit: true, oc: {})
       unless oc.member? self
         self.inject(oc[self] = self.class.new) do |copy, v|
