@@ -7,6 +7,9 @@ not want to clone, but maintain references to. And some references you may not w
 Enter DeepDive. Allows you a means by which you can do controlled deep cloning or
 copying of your complex interconnected objects.
 
+== Gem Version
+{<img src="https://badge.fury.io/rb/deep_dive.png" alt="Gem Version" />}[http://badge.fury.io/rb/deep_dive]
+
 == Usage
 Simply include DeepDive in your base class. All classes derived will be set
 for deep cloning or deep duping.
