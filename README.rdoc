@@ -66,6 +66,16 @@ which will basically do a deep dup of @foo.
 Please see spec/lib/deep_dive/deep_dive_spec.rb for a more comprehensve example
 of the above. Better documentation will be supplied shortly.
 
+== Future Proposals
+
+It may be desirable to be able to pass a block into the 'exclude' DSL for more
+fine-grained control of whether a instance variable is copied or referenced.
+
+== Note Well
+
+DeepDive is expected to undergo rapid evolution until it hits 1.0.0. I will take
+every effort to keep the API backwards compatable until then.
+
 == Copyright
 
 Copyright (c) 2013-2014 Fred Mitchell. See LICENSE.txt for
