@@ -56,7 +56,12 @@ So now if you do:
  nfoo = @foo.dclone
 
 @foo.c will refer to the same object as nfoo.c,
-but @foo.b and nfoo.b will be different, as nfoo.b will be a clone of @foo.b.
+but @foo.b and nfoo.b will be different, as nfoo.b will be a deep clone of @foo.b.
+
+Also, you may do:
+ mfoo = @foo.ddup
+
+which will basically do a deep dup of @foo.
 
 Please see spec/lib/deep_dive/deep_dive_spec.rb for a more comprehensve example
 of the above. Better documentation will be supplied shortly.
