@@ -63,6 +63,6 @@ of the above. Better documentation will be supplied shortly.
 
 == Copyright
 
-Copyright (c) 2013 Fred Mitchell. See LICENSE.txt for
+Copyright (c) 2013-2014 Fred Mitchell. See LICENSE.txt for
 further details.
 
