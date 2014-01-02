@@ -51,19 +51,19 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="README.rdoc" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="README.rdoc" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.rdoc">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="46" column="20" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0" vertical-offset="311" max-vertical-offset="1335">
+                <state line="46" column="20" selection-start="1480" selection-end="1480" vertical-scroll-proportion="1.1958406" vertical-offset="0" max-vertical-offset="1335">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="deep_dive_spec.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="deep_dive_spec.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/spec/lib/deep_dive/deep_dive_spec.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="86" column="28" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.6694915" vertical-offset="895" max-vertical-offset="1485">
+                <state line="86" column="28" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.0" vertical-offset="895" max-vertical-offset="1485">
                   <folding />
                 </state>
               </provider>
@@ -730,13 +730,6 @@
         <state line="28" column="26" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.42510122" vertical-offset="0" max-vertical-offset="1230" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.rdoc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="20" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0" vertical-offset="311" max-vertical-offset="1335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
@@ -760,7 +753,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/lib/deep_dive/deep_dive_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="28" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.6694915" vertical-offset="895" max-vertical-offset="1485">
+        <state line="86" column="28" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.0" vertical-offset="895" max-vertical-offset="1485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rdoc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="20" selection-start="1480" selection-end="1480" vertical-scroll-proportion="1.1958406" vertical-offset="0" max-vertical-offset="1335">
           <folding />
         </state>
       </provider>
