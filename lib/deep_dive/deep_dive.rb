@@ -78,7 +78,7 @@ module DeepDive
             raise DeepDiveException.new("Don't know how to add new elements for class #{self.class}")
         end
       else
-        self[v.first] = _ob_maybe_repl(v: v, dupit: dupit, oc: oc)
+        self[v.first] = _ob_maybe_repl(v: v.last, dupit: dupit, oc: oc)
       end
     end
 

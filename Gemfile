@@ -5,6 +5,8 @@ source "http://rubygems.org"
 
 ruby '2.0.0'
 
+gem 'debase'
+
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :development do
@@ -14,4 +16,6 @@ group :development do
   gem "jeweler", "~> 1.8.7"
   gem "simplecov"
   gem 'semver'
+  gem 'guard-rspec'
+  gem 'ruby-debug-ide'
 end

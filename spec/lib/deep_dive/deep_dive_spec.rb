@@ -6,11 +6,11 @@ class FooBase
 end
 
 class Foo < FooBase
-  attr_accessor :a, :b, :c, :changeme
+  attr_accessor :a, :b, :c, :changeme, :h
 end
 
 class Bar < FooBase
-  attr_accessor :a, :b, :c, :changeme
+  attr_accessor :a, :b, :c, :changeme, :h
 end
 
 class FooBar < FooBase
@@ -31,6 +31,7 @@ describe DeepDive do
     @foo.b = @bar
     @bar.b = @foo
     @foo.c = @bar.c = @foobar.c = @foobar
+    @foo.h = @bar.h = {1 => "one", 2 => "two", 3 => "three"}
     @foo.changeme = @bar.changeme = @foobar.changeme = "initial"
   end
 
@@ -55,6 +56,11 @@ describe DeepDive do
       cfoo = @foo.dclone
       cfoo.a.should_not == @foo.a
     end
+
+    it 'handles hash cloning properly' do
+      cfoo = @foo.dclone
+      cfoo.h[1].should == "one"
+    end
   end
 
   context 'dup' do
@@ -62,7 +68,6 @@ describe DeepDive do
       cfoo = @foo.ddup
       cfoo.should_not == nil
     end
-    it 'deep'
   end
 
   context 'enumerables' do
@@ -78,10 +83,10 @@ describe DeepDive do
     end
 
     it 'makes copies of the hashed objects' do
-      cfb = @foobar.dclone
-      cfb.hsh.size.should > 0
-      cfb.hsh.each do |k, o|
-        cfb.hsh[k].should_not == @foobar.hsh[k]
+      cfb = @foo.dclone
+      cfb.h.size.should == 3
+      cfb.h.each do |k, o|
+        cfb.h[k].should == @foo.h[k]
       end
     end
   end
