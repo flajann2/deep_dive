@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "deep_dive"
-  s.version = "0.0.6"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Fred Mitchell"]
-  s.date = "2014-01-02"
+  s.date = "2014-01-05"
   s.description = "\n  When you have a system of objects that have many references to each other, it becomes an\n  issue to be able to clone properly that object graph. There may be control objects you may\n  not want to clone, but maintain references to. And some references you may not wish to clone at all.\n\n  Enter DeepDive. Allows you a means by which you can do controlled deep cloning or\n  copying of your complex interconnected objects.\n  "
   s.email = "fred@lrcsoft.com"
   s.extra_rdoc_files = [

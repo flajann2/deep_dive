@@ -70,6 +70,26 @@ describe DeepDive do
     end
   end
 
+  context Hash do
+    it 'has the API' do
+      a = {a: 1, b: 2, foo: @foo}
+      a.respond_to?(:dclone).should == true
+      a.respond_to?(:ddup).should == true
+      b = a.dclone
+      b[:a].should == a[:a]
+      b[:foo].should_not == a[:foo]
+    end
+  end
+
+  context Array do
+    it 'has the API' do
+      a = [1, 2, @bar]
+      b = a.dclone
+      a[0].should == b[0]
+      a[2].should_not == b[2]
+    end
+  end
+
   context 'enumerables' do
     it 'makes copies of the arrayed objects' do
       cfb = @foobar.dclone

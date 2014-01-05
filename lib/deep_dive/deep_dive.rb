@@ -18,14 +18,26 @@ module DeepDive
   class DeepDiveException < Exception
   end
 
-  # #ddup is a Deep Dive's replacement for #dup.
-  def ddup
-    _replicate dupit: true
+  module API
+    # #ddup is a Deep Dive's replacement for #dup.
+    def ddup
+      _replicate dupit: true
+    end
+
+    # #dclone is Deep Dive's replacement for #clone.
+    def dclone
+      _replicate dupit: false
+    end
   end
 
-  # #dclone is Deep Dive's replacement for #clone.
-  def dclone
-    _replicate dupit: false
+  include API
+
+  class ::Hash
+    include API
+  end
+
+  class ::Array
+    include API
   end
 
   # not meant to be called externally. Use either ddup or dclone.
@@ -71,8 +83,8 @@ module DeepDive
     def _add(v: nil, dupit: nil, oc: nil)
       unless _pairs?
         case
-          when self.kind_of?(Set)
-          when self.kind_of?(Array)
+          when self.kind_of?(::Set)
+          when self.kind_of?(::Array)
             self << _ob_maybe_repl(v: v, dupit: dupit, oc: oc)
           else
             raise DeepDiveException.new("Don't know how to add new elements for class #{self.class}")
@@ -86,7 +98,7 @@ module DeepDive
     # (as in the case of a Hash) or objects (which may look like pairs
     # but not really).
     def _pairs?
-      self.kind_of? Hash
+      self.kind_of? ::Hash
     end
 
     # Here, with this Enumerator, we want to create a new empty instance
