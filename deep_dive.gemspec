@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     ".idea/encodings.xml",
     ".idea/misc.xml",
     ".idea/modules.xml",
+    ".idea/runConfigurations/deep_dive.xml",
     ".idea/scopes/scope_settings.xml",
     ".idea/vcs.xml",
     ".idea/workspace.xml",
