@@ -36,7 +36,11 @@ Jeweler::Tasks.new do |gem|
   }
   gem.email = "lordalveric@yahoo.com"
   gem.authors = ["Fred Mitchell"]
-  # dependencies defined in Gemfile
+
+  # Exclusions
+  gem.files.exclude 'foo/**/*', 'rdoc/*',
+                    '.idea/**/*', '.idea/**/.*', '.yardoc/**/*',
+                    'Guardfile'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
