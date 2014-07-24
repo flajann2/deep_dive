@@ -125,9 +125,10 @@ module DeepDive
   module CMeth
     @@exclusion = []
     # exclusion list of instance variables to dup/clone
-    def exclude(*list)
+    def exclude(*list, &block)
       @@exclusion << list.map { |s| "@#{s}".to_sym }
       @@exclusion.flatten!
+      @@exclusion_block = block if block_given?
     end
 
     # Internal function not meant to be called by the application.
