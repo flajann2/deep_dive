@@ -20,8 +20,8 @@ end
 
 class FooBarFoo < FooBar
   attr_accessor :freject, :fa, :fb, :fc, :frecur, :fexcludeme
-  exclude { |svm, obj|
-    sym == :fexcludeme if obj.instance_variable_defined?(:freject) and obj.send(:freject)
+  exclude { |sym, obj|
+    sym == :@fexcludeme if obj.instance_variable_defined?(:@freject) and obj.send(:freject)
   }
 end
 
@@ -47,6 +47,7 @@ describe DeepDive do
     @fbf.fb = @bar
     @fbf.fc = @foobar
     @fbf.frecur = @fbf
+    @fbf.fexcludeme = Foo.new
   end
 
 
@@ -125,8 +126,17 @@ describe DeepDive do
     end
   end
 
-  context 'block exclusion' do
-    it 'copies with freject true'
-    it 'copies with freject false'
+  context 'block exclusions' do
+    it 'copies with freject true' do
+      @fbf.freject = true
+      a = @fbf.dclone
+      a.fexcludeme.should == @fbf.fexcludeme
+    end
+
+    it 'copies with freject false' do
+      @fbf.freject = false
+      b = @fbf.dclone
+      b.fexcludeme.should_not == @fbf.fexcludeme
+    end
   end
 end
