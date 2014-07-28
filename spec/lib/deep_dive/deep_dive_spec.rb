@@ -18,11 +18,20 @@ class FooBar < FooBase
   exclude :dontcopy
 end
 
+class FooBarFoo < FooBar
+  attr_accessor :freject, :fa, :fb, :fc, :frecur, :fexcludeme
+  exclude { |sym, obj|
+    sym == :@fexcludeme if obj.instance_variable_defined?(:@freject) and obj.send(:freject)
+  }
+end
+
 describe DeepDive do
   before(:each) do
     @foo = Foo.new
     @bar = Bar.new
     @foobar = FooBar.new
+    @fbf = FooBarFoo.new
+
     @foobar.arr = [@foo, @bar, @foobar, "Just a string"]
     @foobar.hsh = {foo: @foo, bar: @bar, foobar: @foobar, nonddob: "just a string"}
 
@@ -33,6 +42,12 @@ describe DeepDive do
     @foo.c = @bar.c = @foobar.c = @foobar
     @foo.h = @bar.h = {1 => "one", 2 => "two", 3 => "three"}
     @foo.changeme = @bar.changeme = @foobar.changeme = "initial"
+
+    @fbf.fa = @foo
+    @fbf.fb = @bar
+    @fbf.fc = @foobar
+    @fbf.frecur = @fbf
+    @fbf.fexcludeme = Foo.new
   end
 
 
@@ -108,6 +123,20 @@ describe DeepDive do
       cfb.h.each do |k, o|
         cfb.h[k].should == @foo.h[k]
       end
+    end
+  end
+
+  context 'block exclusions' do
+    it 'copies with freject true' do
+      @fbf.freject = true
+      a = @fbf.dclone
+      a.fexcludeme.should == @fbf.fexcludeme
+    end
+
+    it 'copies with freject false' do
+      @fbf.freject = false
+      b = @fbf.dclone
+      b.fexcludeme.should_not == @fbf.fexcludeme
     end
   end
 end

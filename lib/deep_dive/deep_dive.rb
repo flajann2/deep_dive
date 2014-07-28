@@ -40,7 +40,7 @@ module DeepDive
     include API
   end
 
-  # not meant to be called externally. Use either ddup or dclone.
+  # Not meant to be called externally. Use either ddup or dclone.
   def _replicate(dupit: true, oc: {})
     unless oc.member? self
       copy = oc[self] = if dupit
@@ -53,7 +53,7 @@ module DeepDive
       end.reject do |var, ob|
         not ob.respond_to? :_replicate
       end.reject do |var, ob|
-        self.class.excluded? var
+        self.class.excluded?(var, self)
       end.each do |var, value|
         copy.instance_variable_set(var, value._replicate(oc: oc, dupit: dupit))
       end
@@ -125,14 +125,17 @@ module DeepDive
   module CMeth
     @@exclusion = []
     # exclusion list of instance variables to dup/clone
-    def exclude(*list)
+    def exclude(*list, &block)
       @@exclusion << list.map { |s| "@#{s}".to_sym }
       @@exclusion.flatten!
+      @@exclusion_block = block if block_given?
     end
 
     # Internal function not meant to be called by the application.
-    def excluded?(sym)
-      @@exclusion.member? sym
+    def excluded?(sym, ob = nil)
+      unless @@exclusion_block.nil?
+        @@exclusion_block.(sym, ob)
+      end || @@exclusion.member?(sym)
     end
   end
 
