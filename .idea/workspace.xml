@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d0bc731-6bdc-437f-8e78-62445bd62ac9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../queue_ding/spec/pipeline_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../queue_ding/lib/queue_ding/queue_ding.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../rubyneat_dashboard/lib/rubyneat_dashboard/pipeline.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../rubyneat_dashboard/spec/lib/rubyneat_dashboard/pipeline_spec.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../queue_ding/lib/queue_ding.rb" afterPath="$PROJECT_DIR$/../queue_ding/lib/queue_ding.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rubyneat_dashboard/Gemfile.lock" afterPath="$PROJECT_DIR$/../rubyneat_dashboard/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../queue_ding/README.rdoc" afterPath="$PROJECT_DIR$/../queue_ding/README.rdoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../queue_ding/Gemfile" afterPath="$PROJECT_DIR$/../queue_ding/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rubyneat_dashboard/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../rubyneat_dashboard/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rubyneat_dashboard/Gemfile" afterPath="$PROJECT_DIR$/../rubyneat_dashboard/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rubyneat_dashboard/lib/rubyneat_dashboard/main.rb" afterPath="$PROJECT_DIR$/../rubyneat_dashboard/lib/rubyneat_dashboard/main.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rubyneat_dashboard/views/population/home.haml" afterPath="$PROJECT_DIR$/../rubyneat_dashboard/views/population/home.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rubyneat_dashboard/app/js/dashboard/directives/population_progress_chart.coffee" afterPath="$PROJECT_DIR$/../rubyneat_dashboard/app/js/dashboard/directives/population_progress_chart.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rubyneat_dashboard/.idea/rubyneat_dashboard.iml" afterPath="$PROJECT_DIR$/../rubyneat_dashboard/.idea/rubyneat_dashboard.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../queue_ding/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../queue_ding/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../rubyneat_dashboard/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../rubyneat_dashboard/.idea/workspace.xml" />
     </list>
     <ignored path="deep_dive.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,8 +21,8 @@
   <component name="ChangesViewManager" flattened_view="false" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/deep_dive@Run_spec__deep_dive_spec___deep_dive.coverage" NAME="Run spec 'deep_dive_spec': deep_dive Coverage Results" MODIFIED="1388881851308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="deep_dive" />
-    <SUITE FILE_PATH="coverage/deep_dive@RSpec.coverage" NAME="RSpec Coverage Results" MODIFIED="1406484383129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="deep_dive" />
     <SUITE FILE_PATH="coverage/deep_dive@deep_dive.coverage" NAME="deep_dive Coverage Results" MODIFIED="1388700129166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="deep_dive" />
+    <SUITE FILE_PATH="coverage/deep_dive@RSpec.coverage" NAME="RSpec Coverage Results" MODIFIED="1406654729238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="deep_dive" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -42,30 +38,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="deep_dive.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/deep_dive.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="126">
-                  <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="deep_dive.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="deep_dive.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/deep_dive/deep_dive.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="410" max-vertical-offset="2790">
-                  <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+                <state vertical-scroll-proportion="1.4453608" vertical-offset="1927" max-vertical-offset="2790">
+                  <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.rdoc" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="README.rdoc" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/README.rdoc">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.875576" vertical-offset="752" max-vertical-offset="1710">
+                <state vertical-scroll-proportion="0.0" vertical-offset="752" max-vertical-offset="1710">
                   <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
                   <folding />
                 </state>
@@ -79,28 +65,28 @@
           <file leaf-file-name="deep_dive.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/deep_dive/deep_dive.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2790">
-                  <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="2502" max-vertical-offset="2790">
+                  <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
+                <state vertical-scroll-proportion="0.43373495" vertical-offset="0" max-vertical-offset="498">
                   <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="deep_dive_spec.rb" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="deep_dive_spec.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/spec/lib/deep_dive/deep_dive_spec.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5046083" vertical-offset="30" max-vertical-offset="2664">
-                  <caret line="26" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2664">
+                  <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -131,17 +117,15 @@
         <option value="$PROJECT_DIR$/../queue_ding/lib/queue_ding.rb" />
         <option value="$PROJECT_DIR$/Gemfile.lock" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/README.rdoc" />
         <option value="$PROJECT_DIR$/spec/lib/deep_dive/deep_dive_spec.rb" />
         <option value="$PROJECT_DIR$/lib/deep_dive/deep_dive.rb" />
-        <option value="$PROJECT_DIR$/README.rdoc" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="-3" />
-    <option name="width" value="1924" />
-    <option name="height" value="1052" />
+    <option name="width" value="1918" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -284,7 +268,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/spec" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="project.settings.patched" value="true" />
   </component>
@@ -532,17 +516,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-3" width="1924" height="1052" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1918" height="1045" extended-state="4" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13578275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13568376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294347" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41740087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41731408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20074548" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20073956" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -575,18 +559,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/spec/lib/deep_dive/deep_dive_spec.rb</url>
-          <line>131</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/deep_dive/deep_dive.rb</url>
           <line>55</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/deep_dive/deep_dive.rb</url>
-          <line>136</line>
+          <line>139</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
@@ -594,6 +573,14 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/spec/lib/deep_dive/deep_dive_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="2142">
+          <caret line="26" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/deep_dive.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="126">
@@ -903,13 +890,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40862656" vertical-offset="0" max-vertical-offset="881">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
@@ -919,19 +906,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/deep_dive.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38875878" vertical-offset="1162" max-vertical-offset="2016">
           <caret line="83" column="18" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -943,42 +921,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+    <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/rspec-expectations-3.0.3/lib/rspec/expectations/fail_with.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60792077" vertical-offset="215" max-vertical-offset="720">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/deep_dive/deep_dive.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="410" max-vertical-offset="2790">
-          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="752" max-vertical-offset="1710">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/lib/deep_dive/deep_dive_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5046083" vertical-offset="30" max-vertical-offset="2664">
-          <caret line="26" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2664">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.rdoc">
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.875576" vertical-offset="752" max-vertical-offset="1710">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43373495" vertical-offset="0" max-vertical-offset="498">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/deep_dive.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.020547945" vertical-offset="0" max-vertical-offset="876">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/deep_dive/deep_dive.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4453608" vertical-offset="1927" max-vertical-offset="2790">
+          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
           <folding />
         </state>
       </provider>

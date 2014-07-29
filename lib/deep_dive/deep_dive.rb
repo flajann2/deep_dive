@@ -133,7 +133,7 @@ module DeepDive
 
     # Internal function not meant to be called by the application.
     def excluded?(sym, ob = nil)
-      unless @@exclusion_block.nil?
+      if defined? @@exclusion_block
         @@exclusion_block.(sym, ob)
       end || @@exclusion.member?(sym)
     end
