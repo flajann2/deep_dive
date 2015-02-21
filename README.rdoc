@@ -1,5 +1,7 @@
 = DeepDive Deep Contolled Cloning
 
+{<img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/flajann2/deep_dive">}[https://gitter.im/flajann2/deep_dive?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge]
+
 When you have a system of objects that have many references to each other, it becomes an
 issue to be able to clone properly that object graph. There may be control objects you may
 not want to clone, but maintain references to. And some references you may not wish to clone at all.
