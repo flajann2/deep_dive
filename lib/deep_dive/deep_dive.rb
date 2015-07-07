@@ -18,6 +18,14 @@ module DeepDive
   class DeepDiveException < Exception
   end
 
+  def self.verbose=(t)
+    @@verbosity = t
+  end
+
+  def self.verbose?
+    defined?(@@verbosity) && @@verbosity 
+  end
+
   module API
     # #ddup is a Deep Dive's replacement for #dup.
     def ddup
@@ -43,6 +51,8 @@ module DeepDive
   # Not meant to be called externally. Use either ddup or dclone.
   def _replicate(dupit: true, oc: {})
     unless oc.member? self
+      puts "DeepDive: replicating #{self.class}" if DeepDive::verbose?
+
       copy = oc[self] = if dupit
                           dup
                         else

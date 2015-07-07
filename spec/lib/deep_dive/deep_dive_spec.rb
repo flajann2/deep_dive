@@ -50,6 +50,14 @@ describe DeepDive do
     @fbf.fexcludeme = Foo.new
   end
 
+  context 'debugging' do
+    it 'handles verbosity switching' do
+      DeepDive.verbose = true
+      DeepDive.verbose?.should be_true
+      DeepDive.verbose = false
+      DeepDive.verbose?.should be_false
+    end
+  end
 
   context 'clone' do
     it 'simple' do

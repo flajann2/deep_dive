@@ -16,6 +16,18 @@ copying of your complex interconnected objects.
 Simply include DeepDive in your base class. All classes derived will be set
 for deep cloning or deep duping.
 
+=== Debugging
+In some cases, you may need to get a dump of classes DeepDive is replicating,
+particulary if you need to hunt down objects whose instance variables might
+need to be added to the exclsion list. In that case, you may turn on the verbose
+mode, thusly:
+
+  DeepDive.verbose = true
+
+in which case you will get a dump to stdout of all the classes
+of the objects it copies, which can be copious depending on your
+application.
+
 == Examples
 
  class FooBase
