@@ -28,13 +28,18 @@ module DeepDive
 
   module API
     # #ddup is a Deep Dive's replacement for #dup.
-    def ddup
-      _replicate dupit: true
+    def ddup(**patch)
+      _replicate dupit: true, patch: _patch_at(**patch)
     end
 
     # #dclone is Deep Dive's replacement for #clone.
-    def dclone
-      _replicate dupit: false
+    def dclone(**patch)
+      _replicate dupit: false, patch: _patch_at(**patch)
+    end
+
+    # Do not use. Internal only.
+    def _patch_at(**p)
+      Hash[p.map{|k, v| ["@#{k}".to_sym, v]}]
     end
   end
 
@@ -48,8 +53,11 @@ module DeepDive
     include API
   end
 
+
   # Not meant to be called externally. Use either ddup or dclone.
-  def _replicate(dupit: true, oc: {})
+  # The patch list will take the value and use that wherver 
+  # it finds the key instance variable down the object graph.
+  def _replicate(dupit: true, oc: {}, patch: {})
     unless oc.member? self
       puts "DeepDive: replicating #{self.class}:<#{self.object_id.to_s(16)}>" if DeepDive::verbose?
 
@@ -58,6 +66,7 @@ module DeepDive
                         else
                           clone
                         end
+
       copy.instance_variables.map do |var|
         [var, instance_variable_get(var)]
       end.reject do |var, ob|
@@ -65,8 +74,15 @@ module DeepDive
       end.reject do |var, ob|
         self.class.excluded?(var, self)
       end.each do |var, value|
-        puts "DeepDive: rep instance var #{self.class}.#{var}(#{value.class}:<#{value.object_id.to_s(16)}>)" if DeepDive::verbose?
-        copy.instance_variable_set(var, value._replicate(oc: oc, dupit: dupit))
+        unless patch.member? var
+          puts "DeepDive: rep instance var #{self.class}.#{var}(#{value.class}:<#{value.object_id.to_s(16)}>)" if DeepDive::verbose?
+          copy.instance_variable_set(var, value._replicate(oc: oc, 
+                                                           dupit: dupit, 
+                                                           patch: patch))
+        else
+          puts "DeepDive: PATCH instance var #{self.class}.#{var}(#{patch[var].class}:<#{patch[var].object_id.to_s(16)}>)" if DeepDive::verbose?
+          copy.instance_variable_set(var, patch[var])
+        end
       end
     end
     oc[self]
@@ -76,9 +92,9 @@ module DeepDive
   # differently.
   module ::Enumerable
     # FIXME: clean up the code a bit, this could be better structured.
-    def _ob_maybe_repl(v: nil, dupit: nil, oc: nil)
+    def _ob_maybe_repl(v: nil, dupit: nil, oc: nil, patch: {})
       if v.respond_to? :_replicate
-        v._replicate(oc: oc, dupit: dupit)
+        v._replicate(oc: oc, dupit: dupit, patch: patch)
       else
         v
       end
@@ -91,7 +107,7 @@ module DeepDive
     # Here all the logic will be present to handle the "special case"
     # enumerables. Most notedly, Hash and Array will require special
     # treatment.
-    def _add(v: nil, dupit: nil, oc: nil)
+    def _add(v: nil, dupit: nil, oc: nil, patch: {})
       unless _pairs?
         case
           when self.kind_of?(::Set)
@@ -101,7 +117,7 @@ module DeepDive
             raise DeepDiveException.new("Don't know how to add new elements for class #{self.class}")
         end
       else
-        self[v.first] = _ob_maybe_repl(v: v.last, dupit: dupit, oc: oc)
+        self[v.first] = _ob_maybe_repl(v: v.last, dupit: dupit, oc: oc, patch: patch)
       end
     end
 
@@ -122,10 +138,10 @@ module DeepDive
     #
     # FIXME: We will initially not handle Enumberables that have instance variables.
     # FIXME: This issue will be addressed at a later date.
-    def _replicate(dupit: true, oc: {})
+    def _replicate(dupit: true, oc: {}, patch: {})
       unless oc.member? self
         self.inject(oc[self] = self.class.new) do |copy, v|
-          copy._add(v: v, dupit: dupit, oc: oc)
+          copy._add(v: v, dupit: dupit, oc: oc, patch: patch)
           copy
         end
       end
@@ -135,7 +151,7 @@ module DeepDive
 
   module CMeth
     @@exclusion = []
-    # exclusion list of instance variables to dup/clone
+    # exclusion list of instance variables to NOT dup/clone
     def exclude(*list, &block)
       @@exclusion << list.map { |s| "@#{s}".to_sym }
       @@exclusion.flatten!

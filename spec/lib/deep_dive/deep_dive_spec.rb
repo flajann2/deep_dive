@@ -30,6 +30,7 @@ describe DeepDive do
     @foo = Foo.new
     @bar = Bar.new
     @foobar = FooBar.new
+    @patch = FooBar.new
     @fbf = FooBarFoo.new
 
     @foobar.arr = [@foo, @bar, @foobar, "Just a string"]
@@ -48,7 +49,7 @@ describe DeepDive do
     @fbf.fc = @foobar
     @fbf.frecur = @fbf
     @fbf.fexcludeme = Foo.new
-    # DeepDive.verbose = true
+    DeepDive.verbose = true
   end
 
   context 'debugging' do
@@ -79,6 +80,11 @@ describe DeepDive do
       @foo.a = @bar
       cfoo = @foo.dclone
       cfoo.a.should_not == @foo.a
+    end
+
+    it 'patches' do
+      pf = @foo.dclone b: @patch
+      pf.b.should == @patch
     end
 
     it 'handles hash cloning properly' do

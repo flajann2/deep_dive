@@ -87,12 +87,30 @@ which will basically do a deep dup of @foo.
 Please see spec/lib/deep_dive/deep_dive_spec.rb for a more comprehensve example
 of the above. Better documentation will be supplied shortly.
 
+=== Patching
+In some rare circumstances, you may need to patch an instance
+variable in your object graph during deep copying. Like for
+instance, when a child object is being cloned seprately from a different
+parent to be associated with a new parent.
+
+We introduce patching. The instance variable
+
+ @foo.parent = @oldparent
+ pf = @foo.dclone parent: @newparent
+ pf.parent.should == @newparent
+
+And all variables named "parent" in the object graph will
+pick up the new reference.
+
 == Note Well
 
 DeepDive is expected to undergo rapid evolution until it hits 1.0.0. I will take
 every effort to keep the API backwards compatable until then.
 
 == Release Notes
+
+2015-07-07 0.3.0 -- Added debugging and deep patching based
+                    on instance variable names.
 
 2014-07-27 0.2.0 -- Implemented the exclusion block,
                     made gem restrictive to Ruby 2.x and higher.
