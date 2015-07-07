@@ -48,6 +48,7 @@ describe DeepDive do
     @fbf.fc = @foobar
     @fbf.frecur = @fbf
     @fbf.fexcludeme = Foo.new
+    # DeepDive.verbose = true
   end
 
   context 'debugging' do
