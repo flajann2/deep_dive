@@ -112,7 +112,7 @@ module DeepDive
         case
           when self.kind_of?(::Set)
           when self.kind_of?(::Array)
-            self << _ob_maybe_repl(v: v, dupit: dupit, oc: oc)
+            self << _ob_maybe_repl(v: v, dupit: dupit, oc: oc, patch: patch)
           else
             raise DeepDiveException.new("Don't know how to add new elements for class #{self.class}")
         end
