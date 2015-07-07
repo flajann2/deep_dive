@@ -65,7 +65,7 @@ module DeepDive
       end.reject do |var, ob|
         self.class.excluded?(var, self)
       end.each do |var, value|
-        puts "DeepDive: rep instance var #{self.class}.#{var}(#{value.class})" if DeepDive::verbose?
+        puts "DeepDive: rep instance var #{self.class}.#{var}(#{value.class}:<#{value.object_id.to_s(16)}>)" if DeepDive::verbose?
         copy.instance_variable_set(var, value._replicate(oc: oc, dupit: dupit))
       end
     end
