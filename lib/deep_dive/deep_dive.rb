@@ -51,7 +51,7 @@ module DeepDive
   # Not meant to be called externally. Use either ddup or dclone.
   def _replicate(dupit: true, oc: {})
     unless oc.member? self
-      puts "DeepDive: replicating #{self.class}" if DeepDive::verbose?
+      puts "DeepDive: replicating #{self.class}:<#{self.object_id.to_s(16)}>" if DeepDive::verbose?
 
       copy = oc[self] = if dupit
                           dup
