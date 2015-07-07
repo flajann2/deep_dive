@@ -109,11 +109,11 @@ every effort to keep the API backwards compatable until then.
 
 == Release Notes
 
-2015-07-07 0.3.0 -- Added debugging and deep patching based
-                    on instance variable names.
+2015-07-07 0.3.0 -- Added debugging and deep patching based on 
+instance variable names.
 
-2014-07-27 0.2.0 -- Implemented the exclusion block,
-                    made gem restrictive to Ruby 2.x and higher.
+2014-07-27 0.2.0 -- Implemented the exclusion block, 
+made gem restrictive to Ruby 2.x and higher.
 
 == Copyright
 
