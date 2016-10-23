@@ -107,10 +107,20 @@ pick up the new reference.
 
 == Note Well
 
-DeepDive is expected to undergo rapid evolution until it hits 1.0.0. I will take
-every effort to keep the API backwards compatable until then.
+DeepDive is expected to undergo "rapid" evolution until it hits 1.0.0. I will take
+every effort to keep the API backwards compatable until then. Thing is, DeepDive
+seems to be relatively stable anyway. As the RubyNEAT project is driving the features
+of deep_dive, we may see more exotic features in the near future.
+
+Rails is driving much of the Ruby landscape these days. Alas, I have yet to test
+DeepDive in that context. In theory, it should just work fine, but I suspect there
+will need to be special treatment, especially with ActiveRecord type objects. Feel
+free to raise issues here so I can address them.
 
 == Release Notes
+2016-10-23 0.3.4 -- Minor update to spec because the older Rspec syntax
+failed to work in one case. Also updated the dependencies, and ran Rspec
+to ensure it still functions under Ruby 2.3.1
 
 2015-07-07 0.3.0 -- Added debugging and deep patching based on 
 instance variable names.
@@ -118,7 +128,14 @@ instance variable names.
 2014-07-27 0.2.0 -- Implemented the exclusion block, 
 made gem restrictive to Ruby 2.x and higher.
 
+== Wish List and Known Issues
+
+I wish to conver this document to org format someday.
+
+I wish to fully support Rails and some of the special issues that may arise
+there.
+
 == Copyright
 
-Copyright (c) 2013-2014 Fred Mitchell. See LICENSE.txt for
+Copyright (c) 2013-2016 Fred Mitchell. See LICENSE.txt for
 further details.
