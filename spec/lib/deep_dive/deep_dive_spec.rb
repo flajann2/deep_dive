@@ -55,9 +55,9 @@ describe DeepDive do
   context 'debugging' do
     it 'handles verbosity switching' do
       DeepDive.verbose = true
-      DeepDive.verbose?.should be_true
+      expect(DeepDive.verbose?).to be true
       DeepDive.verbose = false
-      DeepDive.verbose?.should be_false
+      expect(DeepDive.verbose?).to be false
     end
   end
 
