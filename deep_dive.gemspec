@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".rspec",
+    ".ruby-version",
     ".semver",
     ".travis.yml",
     "Gemfile",
