@@ -1,5 +1,6 @@
 source "http://rubygems.org"
 gem "json", "~> 2.0", ">= 2.0.2"
+gem 'semver2',        '~> 3'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
@@ -9,7 +10,6 @@ group :development do
   gem 'bundler',        '~> 1'
   gem 'juwelier',       '~> 2'
   gem 'simplecov',      '~> 0'
-  gem 'semver',         '~> 1'
   gem 'guard-rspec',    '~> 1'
 
   gem 'pry',            '~> 0'
