@@ -15,6 +15,16 @@ copying of your complex interconnected objects.
 == Gem Version
 {<img src="https://badge.fury.io/rb/deep_dive.png" alt="Gem Version" />}[http://badge.fury.io/rb/deep_dive]
 
+== Installation
+
+From commandline:
+
+ gem install deep_dive
+
+From Gemfile:
+
+ gem 'deep_dive', '~> 0'
+
 == Usage
 Simply include DeepDive in your base class. All classes derived will be set
 for deep cloning or deep duping.
